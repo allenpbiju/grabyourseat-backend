@@ -153,19 +153,25 @@ table{
     margin: auto;
 }
 
-#add_user .form-group,
-#update_user .form-group{
+#add_event .form-group,
+#update_event .form-group,
+#add_tickets .form-group,
+#update_tickets .form-group{
    margin: .4em 0; 
 }
 
-#update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"],
-#update_user .form-group input[type="number"],
-#add_user .form-group input[type="number"],
-#update_user .form-group input[type="email"],
-#add_user .form-group input[type="email"],
-#update_user .form-group input[type="password"],
-#add_user .form-group input[type="password"]  {
+#update_event .form-group input[type="text"],
+#add_event .form-group input[type="text"],
+#update_event .form-group input[type="number"],
+#add_event .form-group input[type="number"],
+#update_event .form-group input[type="date"],
+#add_event .form-group input[type="date"],
+#update_tickets .form-group input[type="text"],
+#add_tickets .form-group input[type="text"],
+#update_tickets .form-group input[type="number"],
+#add_tickets .form-group input[type="number"],
+#update_tickets .form-group input[type="date"],
+#add_tickets .form-group input[type="date"]  {
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
@@ -175,13 +181,17 @@ table{
     border-radius: .2em;
 }
 
-#update_user .form-group .radio,
-#add_user .form-group .radio {
+#update_event .form-group .checkbox,
+#add_event .form-group .checkbox,
+#update_tickets .form-group .checkbox,
+#add_tickets .form-group .checkbox  {
     margin: 1em 2em;
 }
 
-#update_user .form-group .btn,
-#add_user .form-group .btn{
+#update_event .form-group .btn,
+#add_event .form-group .btn,
+#update_tickets .form-group .btn,
+#add_tickets .form-group .btn{
     width: 100%;
     padding: .9em 1em;
     background-color: #16db93;
@@ -193,8 +203,10 @@ table{
     margin: .5em 0;
 }
 
-#update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover{
+#update_event .form-group .btn:hover,
+#add_event .form-group .btn:hover,
+#update_tickets .form-group .btn:hover,
+#add_tickets .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
 }

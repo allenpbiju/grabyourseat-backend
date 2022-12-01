@@ -1,10 +1,13 @@
 <!--include header-->
-    <%-include('include/_header')%>
+<%-include('include/_header')%>
 <!--/include header-->
  <!--Main Site-->
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
+                <a href="/" class="border-shadow">
+                    <span class="text-gradient">View Events <i class="fa-solid fa-eye"></i></span>
+                </a>
                 <a href="/add-event" class="border-shadow">
                     <span class="text-gradient">Add Events <i class="fa-solid fa-film"></i></span>
                 </a>
@@ -22,17 +25,17 @@
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
-                            <th>Slug</th>
                             <th>Event Name</th>
+                            <th>Date</th>
                             <th>Description</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Published</th>
+                            <th>Price</th>
+                            <th>Total Quantity</th>
+                            <th>Available Quantity</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <%-include('include/_show-event-data')%>
+                        <%-include('include/_show-ticket-data')%>
                     </tbody>
                 </table>
             </form>
