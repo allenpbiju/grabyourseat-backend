@@ -29,7 +29,7 @@ app.get('/',(req,res) => {
 })
 
 app.get('/add-user',(req,res) => {
-    res.render("add_user");
+    res.render("add_event");
 })
 
 app.listen(PORT, () => {
