@@ -28,6 +28,10 @@ app.get('/',(req,res) => {
     res.render("index");
 })
 
+app.get('/add-user',(req,res) => {
+    res.render("add_user");
+})
+
 app.listen(PORT, () => {
     console.log(`Example App listening on port ${PORT}`)
 })

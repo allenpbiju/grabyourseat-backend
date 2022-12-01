@@ -34,7 +34,7 @@ a{
 }
 
 .justify-between{
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .text-center{
@@ -78,6 +78,7 @@ a{
 #site-main .container .box-nav > a{
     font-size: 1em;
     padding: .5em 1em;
+    margin: 0 .5em;
 }
 
 #site-main .container form{
@@ -135,5 +136,66 @@ table{
         border:none;
         position: relative;
     }
+}
+
+/* Add User and Update User Template */
+
+.form-title {
+    margin-top: 2em;
+}
+
+.form-title > h2 {
+    padding: .5em 0;
+}
+
+.new_user {
+    max-width: 786px;
+    margin: auto;
+}
+
+#add_user .form-group,
+#update_user .form-group{
+   margin: .4em 0; 
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"],
+#update_user .form-group input[type="number"],
+#add_user .form-group input[type="number"],
+#update_user .form-group input[type="email"],
+#add_user .form-group input[type="email"],
+#update_user .form-group input[type="password"],
+#add_user .form-group input[type="password"]  {
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_user .form-group .radio,
+#add_user .form-group .radio {
+    margin: 1em 2em;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn{
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #16db93;
+    border: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover{
+    background-color: var(--dark);
+    color: var(--border);
 }
 

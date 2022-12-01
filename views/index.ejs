@@ -1,7 +1,44 @@
 <!--include header-->
     <%-include('include/_header')%>
 <!--/include header-->
+ <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">Add Events <i class="fa-solid fa-film"></i></span>
+                </a>
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">Allot Tickets <i class="fa-solid fa-ticket"></i></span>
+                </a>
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">View Ticket Status <i class="fa-solid fa-eye"></i></span>
+                </a>
+            </div>
 
+            <!--Form Handling-->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Slug</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Published</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%-include('include/_show-data')%>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!--/Main Site-->
 <!--include footer-->
     <%-include('include/_footer')%>
 <!--/include footer-->
