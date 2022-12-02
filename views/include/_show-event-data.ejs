@@ -1,21 +1,23 @@
+<% for(var i=0;i < events.length; i++) { %>
 <tr>
-    <td>1</td>
-    <td>avatar-2</td>
-    <td>Movie: Avatar 2</td>
-    <td>Avatar 2 by James Cameroon</td>
-    <td>01/12/2022</td>
-    <td>25/12/2022</td>
-    <td>true</td>
+    <td><%= i+1 %></td>
+    <td><%= events[i].slug %></td>
+    <td><%= events[i].name %></td>
+    <td><%= events[i].description %></td>
+    <td><%= new Date(events[i].start_date).toLocaleDateString("en-IN") %></td>
+    <td><%= new Date(events[i].end_date).toLocaleDateString("en-IN") %></td>
+    <td><%= events[i].is_Published %></td>
     <td>
-        <a href="/edit-event" class="btn border-shadow update">
+        <a href="/edit-event?id=<%=events[i]._id%>" class="btn border-shadow update">
             <span class="text-gradient">
                 <i class="fas fa-pencil-alt"></i>
             </span>
         </a>
-        <a href="#" class="btn border-shadow delete">
+        <a class="btn border-shadow delete" data-id=<%=events[i]._id%>>
             <span class="text-gradient">
                 <i class="fa-solid fa-trash"></i>
             </span>
         </a>
     </td>
 </tr>
+<% } %>

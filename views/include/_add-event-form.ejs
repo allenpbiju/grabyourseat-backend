@@ -1,10 +1,10 @@
             <!--Form Handling-->
-            <form method="POST" id="add_event">
+            <form action="/api/events" method="POST" id="add_event">
                 <div class="new_user">
                     <div class="form-group">
                         <label for="slug" class="text-light">Slug</label>
                         <input type="hidden" name="id" value="">
-                        <input type="text" name="slug" value="" placeholder="star-wars">
+                        <input type="hidden" name="slug" value="" placeholder="star-wars">
                     </div>
                     <div class="form-group">
                         <label for="name" class="text-light">Event Name</label>
@@ -15,17 +15,17 @@
                         <input type="text" name="description" value="" placeholder="Star Wars The Last Jedi">
                     </div>
                     <div class="form-group">
-                        <label for="start-date" class="text-light">Start Date</label>
-                        <input type="date" name="start-date" value="" placeholder="">
+                        <label for="start_date" class="text-light">Start Date</label>
+                        <input type="date" name="start_date" value="" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label for="end-date" class="text-light">End Date</label>
-                        <input type="date" name="end-date" value="" placeholder="">
+                        <label for="end_date" class="text-light">End Date</label>
+                        <input type="date" name="end_date" value="" placeholder="">
                     </div>
                     <div class="form-group">
                         <div class="form-group checkbox">
-                            <input type="checkbox" name="is-published">
-                            <label for="is-published" class="text-light">Published</label>
+                            <input type="checkbox" name="is_Published" value="true">
+                            <label for="is_Published" class="text-light">Published</label>
                         </div>
                     </div>
                     <div class="form-group">

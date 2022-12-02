@@ -1,5 +1,15 @@
+const axios = require('axios')
+const { response } = require('express')
+
 exports.homeRoutes = (req,res) => {
-    res.render("index");
+    //make a get request to /api/events
+    axios.get('http://localhost:3000/api/events')
+        .then(function(response){
+            res.render('index',{events: response.data})
+        })
+        .catch(err=>{
+            res.send(err)
+        })
 } 
 
 exports.addEvent = (req,res) => { 
@@ -15,7 +25,13 @@ exports.ticketStatus = (req,res) => {
 }
 
 exports.editEvent = (req,res) => {
-    res.render("update_event");
+    axios.get("http://localhost:3000/api/events",{params: {id: req.query.id}})
+        .then(function(eventdata){
+            res.render('update_event',{event: eventdata.data})
+        })
+        .catch(err => {
+            res.send(err);
+        })
 }
 
 exports.editTicket = (req,res) => {
